@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>My Weather App </title>
+    <link rel="stylesheet" href="style.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  </head>
+  <body>
+    <!-- Main Heading -->
+    <div class="heading">
+      <h1>My Weather Application</h1>
+    </div>
+    <!-- Main Container -->
+    <div class="container">
+      <!-- Weather input box -->
+      <div class="weather-input">
+        <h3>Enter a City Name</h3>
+        <input
+          class="city-input"
+          type="text"
+          placeholder="E.g.- Indore, Bhopal, Delhi"
+        />
+        <button class="search-btn">Search</button>
+        <div class="separator"></div>
+        <button class="location-btn">
+          <img src="pin.png" alt="" />
+          Use Current Location
+        </button>
+        <!-- Current weather display box -->
+        <div class="current-weather">
+          <div class="details">
+            <h2 class="city">_______</h2>
+            <h2 class="date">( ______ )</h2>
+            <h6>Temperature: __°C</h6>
+            <h6>Wind: __ M/S</h6>
+            <h6>Humidity: __%</h6>
+          </div>
+        </div>
+      </div>
+      <!-- Pop-up that appears when error occurs. -->
+      <!-- Does not obstruct the flow of document in any way -->
+       <div class="popup center">
+              <div class="icon-popup">
+                <img src="error.png" class="fa fa-check"></img>
+              </div>
+              <div class="title-popup">Error!</div>
+              <div class="description-popup">
+                Loerm Ipsum dolor sit amet consecteur adispicing elit.
+                conseceteur volupatem nulla placeat.
+              </div>
+              <div class="dismiss-btn">
+                <button id="dismiss-popup-btn">Dismiss</button>
+              </div>
+            </div>
+        <!-- Chart and Weahter Cards -->
+      <div class="weather-data">
+        <!-- Chart of next 24 Hours -->
+        <canvas id="forecastChart" width="400" height="125"></canvas>
+        <!-- 4-Day Cards  -->
+        <div class="days-forecast">
+          <h2>4-Day Forecast</h2>
+          <ul class="weather-cards">
+            <li class="card">
+              <h3>( ______ )</h3>
+              <span class="description">_____</span>
+              <h6>Wind: __ M/S</h6>
+              <h6>Humidity: __%</h6>
+            </li>
+            <li class="card">
+              <h3>( ______ )</h3>
+              <span class="description">_____</span>
+              <h6>Wind: __ M/S</h6>
+              <h6>Humidity: __%</h6>
+            </li>
+            <li class="card">
+              <h3>( ______ )</h3>
+              <span class="description">_____</span>
+              <h6>Wind: __ M/S</h6>
+              <h6>Humidity: __%</h6>
+            </li>
+            <li class="card">
+              <h3>( ______ )</h3>
+              <span class="description">_____</span>
+              <h6>Wind: __ M/S</h6>
+              <h6>Humidity: __%</h6>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
